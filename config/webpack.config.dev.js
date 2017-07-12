@@ -178,6 +178,7 @@ module.exports = {
               presets: [require.resolve('babel-preset-react-app')],
               plugins: [
                 require.resolve('babel-plugin-relay'),
+                ['import', { libraryName: 'antd', style: true }]
                 ['import', { libraryName: 'antd-mobile', style: true }]
               ],
               // @remove-on-eject-end
@@ -223,6 +224,15 @@ module.exports = {
                 },
               },
             ],
+          },
+          // It is generally necessary to use the Icon component, need to configure svg-sprite-loader
+          {
+            test: /\.(svg)$/i,
+            loader: 'svg-sprite-loader',
+            include: [
+              require.resolve('antd-mobile').replace(/warn\.js$/, ''),  // 1. svg files of antd-mobile
+              // path.resolve(__dirname, 'src/my-project-svg-foler'),  // folder of svg files in your project
+            ]
           },
           {
             test: /\.less$/,
