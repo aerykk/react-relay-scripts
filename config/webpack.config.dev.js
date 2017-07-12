@@ -180,7 +180,6 @@ module.exports = {
                 require.resolve('babel-plugin-relay'),
                 [
                   'import',
-                  { libraryName: 'antd', style: true },
                   { libraryName: 'antd-mobile', style: true }
                 ]
               ],
