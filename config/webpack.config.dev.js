@@ -178,7 +178,7 @@ module.exports = {
               presets: [require.resolve('babel-preset-react-app')],
               plugins: [
                 require.resolve('babel-plugin-relay'),
-                ['import', { libraryName: 'antd', style: true }]
+                ['import', { libraryName: 'antd', style: true }],
                 ['import', { libraryName: 'antd-mobile', style: true }]
               ],
               // @remove-on-eject-end
