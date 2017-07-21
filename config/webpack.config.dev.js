@@ -229,8 +229,6 @@ module.exports = {
               },
             ],
           },
-<<<<<<< HEAD
-=======
           // It is generally necessary to use the Icon component, need to configure svg-sprite-loader
           {
             test: /\.(svg)$/i,
@@ -240,7 +238,6 @@ module.exports = {
               // path.resolve(__dirname, 'src/my-project-svg-foler'),  // folder of svg files in your project
             ]
           },
->>>>>>> origin/master
           {
             test: /\.less$/,
             use: [
